@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        Bienvenido a su banco 
+      </a>
+    </div>
+  </nav>
+
+ <ul class="list-group">
+     <li class="list-group-item" *ngFor="let user of usuarios ">
+         
+        <h6>{{user}}</h6>
+        
+     </li>
+ </ul>
+ <br>
+ <button class="btn btn-lg btn-danger btn-block" (click)="onSalir()" [routerLink]="['/home']">Salir</button>    

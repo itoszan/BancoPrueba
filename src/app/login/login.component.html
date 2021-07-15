@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-danger">
+       <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+           Bienvenido a su banco
+         </a>
+       </div>
+     </nav>
+<form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+ <div container ="container-fluid">
+  <h2 class="form-signin-heading">Login</h2>
+  <div *ngIf="invalidLogin" class="alert alert-danger">Usuario o password invalidos</div> 
+  <br>
+  <label for="username" class="sr-only" >Usuario</label>
+  <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Usuario" 
+         required autofocus> 
+         
+   <br>
+   <label for="password" class="sr-only">Password</label> 
+   <input type="password" id="password" name="password" ngModel class="form-control" placeholder="password"
+          required>
+   <br>
+   <button class="btn btn-lg btn-danger btn-block" type="submit">Ingresar</button>      
+ </div>
+</form>
